@@ -101,9 +101,9 @@ void loop() {
   sp2 = 1400 - output;
   m1.writeMicroseconds(sp1);
   m2.writeMicroseconds(sp2); 
-  Serial.print("       sp1 :   ");
+  Serial.print("      sp1 :   ");
   Serial.print(sp1);
-  Serial.print("       sp2 :   ");
+  Serial.print("      sp2 :   ");
   Serial.println(sp2);
 }
 
