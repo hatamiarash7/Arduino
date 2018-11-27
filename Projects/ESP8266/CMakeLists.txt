@@ -1,0 +1,16 @@
+cmake_minimum_required(VERSION 2.8.4)
+set(ARDUINO_SDK_PATH 'C:\\Program Files\\WindowsApps\\ArduinoLLC.ArduinoIDE_1.8.10.0_x86__mdqgnx93n4wtt')
+set(CMAKE_TOOLCHAIN_FILE ${CMAKE_SOURCE_DIR}/cmake/ArduinoToolchain.cmake)
+set(PROJECT_NAME ESP8266)
+project(${PROJECT_NAME})
+
+set(${CMAKE_PROJECT_NAME}_SKETCH ESP8266.ino)
+
+#### Uncomment below additional settings as needed.
+# set(${CMAKE_PROJECT_NAME}_BOARD mega)
+# set(${CMAKE_PROJECT_NAME}_PORT /dev/ttyACM0)
+# set(mega.build.mcu atmega2560)
+# set(mega.upload.protocol wiring)
+# set(mega.upload.speed 115200)
+
+generate_arduino_firmware(${CMAKE_PROJECT_NAME})
