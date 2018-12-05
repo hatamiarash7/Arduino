@@ -1,15 +1,10 @@
-int sense_Pin = 0; // A0
+int sense_Pin = 0;
 int value = 0;
 
-void setup() {
-  Serial.begin(9600);
-  delay(2000);
-}
-
-void loop() {
-  Serial.print("MOISTURE LEVEL : ");
+int getMLevel(){
   value = analogRead(sense_Pin);
   value = value / 10;
+  Serial.print("Moisture Level : ");
   Serial.println(value);
-  delay(1000);
+  return value;
 }
